@@ -1,11 +1,17 @@
 """
-In this script I have written a Hangman Game with OOP
+    In this script I have written a Hangman Game with OOP.
+
+    Author: Masoud Maghsoudi
+    Github: https://github.com/masoud-maghsoudi
+    Email:  masoud_maghsoudi@yahoo.com
 """
 
 import hangman as hm
+import os
 
 
 def main():
+    os.chdir(os.path.dirname(__file__))
     play = True
     game = hm.Hangman()
     game.new_game()

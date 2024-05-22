@@ -1,9 +1,15 @@
 """
-This is a class module for Hangman Game
+    This is Hangman Class which generates Hangman games.
+    The word is selected from a dictionary file located in 
+    "words.txt" file in the same directory.
 
+    Author: Masoud Maghsoudi
+    Github: https://github.com/masoud-maghsoudi
+    Email:  masoud_maghsoudi@yahoo.com
 """
 
 from random import choice
+import os
 
 
 class Hangman:
@@ -19,7 +25,7 @@ class Hangman:
         """
         Initiates a Hangman game
         """
-        with open("words.txt", "r", encoding="UTF-8") as file:
+        with open(os.path.join(os.path.dirname(__file__),"words.txt"), "r", encoding="UTF-8") as file:
             for line in file:
                 self.words.append(line.strip().lower())
 
