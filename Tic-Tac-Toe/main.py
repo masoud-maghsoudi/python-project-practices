@@ -1,12 +1,16 @@
 """
-    script doc string
+    In this script I have written a Tic Tac Toe Game with OOP.
+    
+    Author: Masoud Maghsoudi
+    Github: https://github.com/masoud-maghsoudi
+    Email:  masoud_maghsoudi@yahoo.com
 """
 
 import tic_tac_toe as ttt
 
 
-def main():
-
+def main() -> None:
+    """start a game and process it for a single round of game"""
     game = ttt.tic_tac_toe()
     game.select_sides()
     print(f"Your ID is {game.player_id} and PC ID is {game.pc_id}", end="\n \n")
@@ -24,7 +28,7 @@ def main():
             game.pc_turn()
 
     print(game.board, end="\n \n")
-    print(f"Winner is \"{game.winner_check()}\"")
+    print(f'Winner is "{game.winner_check()}"')
 
 
 if __name__ == "__main__":
