@@ -1,8 +1,21 @@
+"""
+    In this script I have written a Rock Paper Scissors Game
+    
+    Author: Masoud Maghsoudi
+    Github: https://github.com/masoud-maghsoudi
+    Email:  masoud_maghsoudi@yahoo.com
+"""
+
 import tkinter as tk
 import random
 
 
 def check_winner(user_action: str) -> None:
+    """checks which side wins the round and update scores and labels
+
+    Args:
+        user_action (str): user action : rock, paper, scissors
+    """
     machine_action = random.choice(actions)
     global round_no
 
@@ -32,6 +45,7 @@ def check_winner(user_action: str) -> None:
 
 
 def reset():
+    """resets all scores and counters and update lables"""
     global round_no
     round_no = 0
     for i in scrores.keys():
@@ -47,16 +61,22 @@ actions = ["rock", "paper", "scissors"]
 scrores = {"player": 0, "machine": 0, "draw": 0}
 round_no = 0
 
+# define base window
+
 window = tk.Tk()
 window.title("Rock Paper Scissor Game")
 window.rowconfigure(0, minsize=100)
 window.resizable(0, 0)
+
+# define frames
 
 frm_score = tk.Frame(window, bg="cyan", borderwidth=2, relief="solid")
 frm_round_count = tk.Frame(window, bg="orange", borderwidth=2, relief="solid")
 frm_round_result = tk.Frame(window)
 frm_action = tk.Frame(window)
 frm_control = tk.Frame(window)
+
+# define lables
 
 lbl_score_player = tk.Label(
     frm_score, text=f"Player: {scrores["player"]}", font="arial 15", bg="cyan"
@@ -90,6 +110,8 @@ lbl_round_result = tk.Label(
     height=2,
 )
 lbl_round_result.grid(row=0, column=0, pady=5)
+
+# define lables
 
 btn_rock = tk.Button(
     frm_action, text="Rock", command=lambda: check_winner("rock"), bg="red", font=15
