@@ -4,10 +4,11 @@
 
 ## Projects List
 
-| Number | Project Name                  |
-| ------ | ----------------------------- |
-| 1      | [Hangman](./Hangman)          |
-| 2      | [Tic Tac Toe](./Tic-Tac-Toe/) |
+| Number | Project Name                                  |
+| ------ | --------------------------------------------- |
+| 1      | [Hangman](./Hangman)                          |
+| 2      | [Tic Tac Toe](./Tic-Tac-Toe/)                 |
+| 3      | [Rock Paper Scissors](./Rock-Paper-Scissors/) |
 
 ## License
 
